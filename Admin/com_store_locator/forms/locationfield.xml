@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="accesscontrol">
+	
+		<field name="asset_id" type="hidden" filter="unset" /> 
+	
+		<field
+			name="rules"
+			type="rules"
+			label="JFIELD_RULES_LABEL"
+			translate_label="false"
+			filter="rules"
+			validate="rules"
+			class="inputbox"
+			component="com_store_locator"
+			section="component" />
+	</fieldset>
+    <fieldset name="details" label="Field Details">
+        <field
+            name="id"
+            type="hidden"
+        />
+        
+        <field
+                name="usergroup"
+                type="UserGroupList"
+                label="Access Control"
+                description=" "
+                layout="joomla.form.field.list-fancy-select"
+                checksuperusergroup="0"
+                default=""
+                multiple="0"
+                >
+                <option value="0">Select User Group</option>
+        </field> 
+
+
+		
+        <field
+                name="detail_link"
+                type="radio"
+                label="Link to Detail Page"
+                default="0"
+                >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>  
+        <field
+            name="title"
+            type="text"
+            label="Field Title"
+            description=" "
+            class="input-xxlarge"
+            size="40"
+            required="true"
+        />
+		
+		
+		<field name="description" filter="JComponentHelper::filterText" type="textarea" required="false" label=" " description="what will this field be used for?" buttons="true" />
+		
+		
+        <field
+            name="field_group"
+            type="sql"
+            label="Field Group"
+            description=" "
+            query="SELECT id, title FROM #__store_locator_field_groups WHERE state = 1"
+            key_field="id"
+            value_field="title"
+            required="true"
+        />
+        <field
+            name="type"
+            type="list"
+            label="Field Type"
+            description=" "
+            required="true"
+            >
+            <option value="calendar">Calendar</option>
+            <option value="checkbox">Checkbox</option>
+            <option value="editor">Editor</option>
+            <option value="image">Image</option>
+            <option value="list">List</option>
+            <option value="radio">Radio</option>
+            <option value="text">Text</option>
+            <option value="textarea">Textarea</option>
+            <option value="url">URL</option>
+        </field>
+        <field
+            name="state"
+            type="list"
+            label=" "
+            class="form-select-color-state"
+            size="1"
+            default="1"
+			
+            >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field
+            name="ordering"
+            type="ordering"
+            label="JFIELD_ORDERING_LABEL"
+            class="inputbox"
+        />
+    </fieldset>
+    
+        <fieldset name="options" label="Field Options">
+            <field
+                name="default_value"
+                type="text"
+                label="Default Value"
+            />
+            <field
+                name="placeholder"
+                type="text"
+                label="Placeholder"
+            />
+            <field
+                name="class"
+                type="text"
+                label=" "
+				description="CSS Class"
+            />
+            <field name="name" type="text" label=" " description="Custom Field Name" />
+			
+            <field name="label" type="text" label=" " description="Database Field Name" />
+            <field
+                name="required"
+                type="radio"
+                label="Field Required?"
+                default="0"
+                >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+        </fieldset>
+</form>

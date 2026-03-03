@@ -1,0 +1,15 @@
+/* ==========================================================================
+	#Transitions
+========================================================================== */
+#pjWrapper .btn,
+#pjWrapper .pjSlForm .form-control,
+#pjWrapper .pjSlForm .input-group .input-group-addon,
+#pjWrapper .pjSlLaunguage .dropdown-toggle .caret,
+#pjWrapper .pjSlLaunguage .dropdown-menu a,
+#pjWrapper .btn-link:before,
+#pjWrapper .pjSlAccordionActions a,
+#pjWrapper .pjSlAccordionActions a .pjSlAccordionSign,
+#pjWrapper .pjSlResults .pjSlResultTitle a,
+#pjWrapper .btnBack:before,
+#pjWrapper .pjSlCustomCheckboxFake,
+#pjWrapper .pjSlCustomCheckboxFake .glyphicon { -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; -o-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }

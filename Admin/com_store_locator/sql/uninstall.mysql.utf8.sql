@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS `#__store_locator_locations`;
+DROP TABLE IF EXISTS `#__store_locator_maps`;
+DROP TABLE IF EXISTS `#__store_locator_map_themes`;
+DROP TABLE IF EXISTS `#__store_locator_map_skins`;
+DROP TABLE IF EXISTS `#__store_locator_frontend_filter`;
+DROP TABLE IF EXISTS `#__store_locator_card_template`;
+DROP TABLE IF EXISTS `#__store_locator_location_results`;
+DROP TABLE IF EXISTS `#__store_locator_location_details`;
+DROP TABLE IF EXISTS `#__store_locator_fields`;
+DROP TABLE IF EXISTS `#__store_locator_field_groups`;
+DROP TABLE IF EXISTS `#__store_locator_custom_data`;
