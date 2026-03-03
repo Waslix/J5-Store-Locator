@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_STORE_LOCATOR_TITLE_LIST_VIEW_LOCATORLOCATIONS" option="View">
+        <message>
+                        <![CDATA[COM_STORE_LOCATOR_TITLE_LIST_VIEW_LOCATORLOCATIONS_DESC]]>
+        </message>
+	</layout>
+	
+</metadata>

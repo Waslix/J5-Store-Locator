@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_STORE_LOCATOR_TITLE_ITEM_VIEW_LOCATORMAP" option="View">
+        <message>
+                        <![CDATA[COM_STORE_LOCATOR_TITLE_ITEM_VIEW_LOCATORMAP_DESC]]>
+        </message>
+    </layout>
+    <fields name="request">
+        <fieldset 
+            name="request"
+            label="COM_STORE_LOCATOR_FIELDSET_ITEM_ID_SELECT_LABEL">
+            <field
+                name="id"
+                query="SELECT `id`, `maptitle` FROM #__store_locator_maps ORDER BY `id`"
+                type="sql"
+                key_field="id" 
+                value_field="maptitle"
+                label="COM_STORE_LOCATOR_ITEM_ID_SELECT_LABEL"
+                require="true"
+                description="JGLOBAL_SHOW_TITLE_DESC">
+            </field>
+        </fieldset>
+    </fields>
+</metadata>
