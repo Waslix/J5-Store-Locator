@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4.0" method="upgrade">
+    <name>com_store_locator</name>
+    <creationDate>2024-10-17</creationDate>
+    <copyright>2024 Monika</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Monika</author>
+    <authorEmail>monika123@gmail.com</authorEmail>
+    <authorUrl>#</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description></description>
+    <namespace path="src">Storelocator\Component\Store_locator</namespace>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <schemas>
+            <schemapath type="mysql">sql/updates</schemapath>
+        </schemas>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    
+
+    <files folder="site">
+        <folder>src</folder>
+        <folder>forms</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="com_store_locator" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <languages folder="site/languages">
+        
+			<language tag="en-GB">en-GB/com_store_locator.ini</language>
+    </languages>
+    <administration>
+        <menu>Location Finder</menu>
+        <submenu>
+			<menu link="option=com_store_locator&amp;view=locatorlocations" view="locatorlocations" alt="Store_locator/Locatorlocations">COM_STORE_LOCATOR_TITLE_LOCATORLOCATIONS</menu>
+            <menu link="option=com_store_locator&amp;view=locatormaps" view="locatormaps" alt="Store_locator/Locatormaps">COM_STORE_LOCATOR_TITLE_LOCATORMAPS</menu>
+            <menu link="option=com_categories&amp;extension=com_store_locator">JCATEGORIES</menu>
+            <menu link="option=com_store_locator&amp;view=locationfields" view="locationfields" alt="Store_locator/Locationfields">Fields</menu>
+            <menu link="option=com_store_locator&amp;view=locationfieldgroups" view="locationfieldgroups" alt="Store_locator/Locationfieldgroups">Field Groups</menu>
+            <menu link="option=com_store_locator&amp;view=mapthemes" view="mapthemes" alt="Store_locator/Mapthemes">Map Themes</menu>
+            <menu link="option=com_store_locator&amp;view=mapskins" view="mapskins" alt="Store_locator/Mapskins">Map Skins</menu>
+            <menu link="option=com_store_locator&amp;view=frontfilters" view="frontfilters" alt="Store_locator/Frontfilters">Frontend Filters</menu>
+            <menu link="option=com_store_locator&amp;view=locationresults" view="locationresults" alt="Store_locator/Locationresults">Location Results</menu>
+            <menu link="option=com_store_locator&amp;view=cardtemplates" view="cardtemplates" alt="Store_locator/cardtemplates">Location Cards</menu>
+            <menu link="option=com_store_locator&amp;view=locationdetails" view="locationdetails" alt="Store_locator/Locationdetails">Location Details</menu>
+            <menu link="option=com_store_locator&amp;view=locationmenulistsingle" view="locationmenulistsingle" alt="Store_locator/Locationmenulistsingle">Location Menu Lists</menu>
+            <menu link="option=com_store_locator&amp;view=locationimport" view="locationimport" alt="Store_locator/Locationimport">Import</menu>
+            <menu link="option=com_store_locator&amp;view=locationexport" view="locationexport" alt="Store_locator/Locationexport">Export</menu>
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>services</folder>
+            <folder>presets</folder>
+            <folder>sql</folder>
+        </files>
+        <languages folder="administrator/languages">
+			<language tag="en-GB">en-GB/com_store_locator.ini</language>
+			<language tag="en-GB">en-GB/com_store_locator.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+    </plugins>
+    
+
+    <updateservers>
+        <server type="extension" priority="1" name="com_store_locator">https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&amp;option=com_combuilder&amp;component=NzYyNjUtMjEzMTIx</server>
+    </updateservers>
+</extension>

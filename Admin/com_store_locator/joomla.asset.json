@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_store_locator",
+  "version": "CVS: 1.0.0",
+  "license": "GNU General Public License version 2 or later; see LICENSE.txt",
+  "assets": [
+    {
+      "name": "com_store_locator.admin",
+      "type": "style",
+      "uri": "com_store_locator/admin.css"
+    },
+    {
+      "name": "com_store_locator.admin",
+      "type": "script",
+      "uri": "com_store_locator/admin.js",
+      "dependencies": [
+        "jquery"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+        "name": "com_store_locator.list",
+        "type": "style",
+        "uri": "com_store_locator/list.css"
+    }
+  ]
+}
